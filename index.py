@@ -1,7 +1,7 @@
 import cgi
+import data_processing as dp
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
-print(form.getvalue("name"))
 html = """<!DOCTYPE html>
 <head>
     <title>Mon programme</title>

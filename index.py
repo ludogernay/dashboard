@@ -1,10 +1,10 @@
 import cgi
-import pandas as pd
+import data_processing as dp
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
-df = pd.read_csv("videogames.csv")
-
+df = dp.read_csv_files("videogames.csv")
+filtered_df = dp.select_between_csv_line(df, "Sales", 20000000,40000000)
 
 html = """<!DOCTYPE html>
 <head>
@@ -49,6 +49,6 @@ html = """<!DOCTYPE html>
 """
 print(html)
 print("<div class='container'>")
-for i in df['Title'].tolist():
+for i in filtered_df['Title'].tolist():
     print(f"<div class=\"game\">{i}</div>")
 print("</div>")

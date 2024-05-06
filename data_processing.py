@@ -8,6 +8,11 @@ def select_csv_line(dataframe, column_name, value) :
     df = dataframe.loc[dataframe[column_name] == value]
     return df
 
+def select_csv_column(dataframe, column_name) :
+    df = dataframe[column_name]
+    return df
+
+
 def select_between_csv_line(dataframe, column_name, value1, value2):
     # Validate parameters
     if value1 is None and value2 is None:
@@ -28,6 +33,5 @@ def select_between_csv_line(dataframe, column_name, value1, value2):
         return dataframe.loc[dataframe[column_name] > value1]
     else:
         return dataframe.loc[(dataframe[column_name] > value1) & (dataframe[column_name] < value2)]
-
 
 

@@ -1,0 +1,41 @@
+ID,Title,Developer,Publisher,Genre,Platform,Release Date,Rating,Sales,ESRB Rating
+1,The Legend of Zelda: Breath of the Wild,Nintendo,Nintendo,Action-adventure,Nintendo Switch,2017-03-03,97,27600000,E10+
+2,God of War,Santa Monica Studio,Sony Interactive Entertainment,Action-adventure,PS4,2018-04-20,94,19000000,M
+3,Red Dead Redemption 2,Rockstar Games,Rockstar Games,Action-adventure,"PS4, Xbox One, PC",2018-10-26,97,44000000,M
+4,Minecraft,Mojang,Mojang,Sandbox,"PC, Mobile, Consoles",2011-11-18,93,238000000,E10+
+5,The Witcher 3: Wild Hunt,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One, Nintendo Switch",2015-05-19,93,30000000,M
+6,Grand Theft Auto V,Rockstar North,Rockstar Games,Action-adventure,"PC, PS3, PS4, Xbox 360, Xbox One",2013-09-17,97,185000000,M
+7,Cyberpunk 2077,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One",2020-12-10,86,20000000,M
+8,Animal Crossing: New Horizons,Nintendo,Nintendo,Social simulation,Nintendo Switch,2020-03-20,90,40000000,E
+9,Fortnite,Epic Games,Epic Games,Battle Royale,"PC, Mobile, Consoles",2017-07-25,87,100000000,T
+10,Call of Duty: Warzone,Infinity Ward,Activision,Battle Royale,"PC, PS4, Xbox One",2020-03-10,78,,M
+11,Apex Legends,Respawn Entertainment,Electronic Arts,Battle Royale,"PC, PS4, Xbox One",2019-02-04,89,,T
+12,Among Us,InnerSloth,InnerSloth,Party,"PC, Mobile",2018-06-15,85,,E10+
+13,Assassin's Creed Valhalla,Ubisoft Montreal,Ubisoft,Action RPG,"PC, PS4, Xbox One",2020-11-10,85,,M
+14,Super Mario Odyssey,Nintendo,Nintendo,Platform,Nintendo Switch,2017-10-27,97,24600000,E10+
+15,Hades,Supergiant Games,Supergiant Games,Roguelike,"PC, PS4, Xbox One, Nintendo Switch",2020-09-17,93,1500000,T
+16,Resident Evil Village,Capcom,Capcom,Survival Horror,"PC, PS4, Xbox One",2021-05-07,83,4500000,M
+17,Doom Eternal,id Software,Bethesda Softworks,First-person shooter,"PC, PS4, Xbox One",2020-03-20,88,3000000,M
+18,Halo Infinite,343 Industries,Xbox Game Studios,First-person shooter,"PC, Xbox One, Xbox Series X/S",2021-12-08,87,4000000,T
+19,FIFA 21,EA Vancouver,EA Sports,Sports,"PC, PS4, Xbox One, Nintendo Switch",2020-10-09,74,12000000,E
+20,Fall Guys: Ultimate Knockout,Mediatonic,Devolver Digital,Party,"PC, PS4, PS5, Xbox One, Xbox Series X/S",2020-08-04,80,11000000,E10+
+21,Cyberpunk 2077,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One",2020-12-10,86,20000000,M
+22,The Last of Us Part II,Naughty Dog,Sony Interactive Entertainment,Action-adventure,PS4,2020-06-19,93,10000000,M
+23,Ghost of Tsushima,Sucker Punch Productions,Sony Interactive Entertainment,Action-adventure,PS4,2020-07-17,83,8000000,M
+24,Bloodborne,FromSoftware,Sony Interactive Entertainment,Action RPG,PS4,2015-03-24,92,2000000,M
+25,Dark Souls III,FromSoftware,Bandai Namco Entertainment,Action RPG,"PC, PS4, Xbox One",2016-03-24,89,10000000,M
+26,Hollow Knight,Team Cherry,Team Cherry,Metroidvania,"PC, PS4, Xbox One, Nintendo Switch",2017-02-24,90,2800000,E10+
+27,Monster Hunter: World,Capcom,Capcom,Action RPG,"PC, PS4, Xbox One",2018-01-26,88,16000000,T
+28,Sekiro: Shadows Die Twice,FromSoftware,Activision,Action-adventure,"PC, PS4, Xbox One",2019-03-22,90,5000000,M
+29,Celeste,Maddy Makes Games,Maddy Makes Games,Platformer,"PC, PS4, Xbox One, Nintendo Switch",2018-01-25,92,500000,T
+30,Overwatch,Blizzard Entertainment,Blizzard Entertainment,First-person shooter,"PC, PS4, Xbox One",2016-05-24,91,50000000,T
+31,The Elder Scrolls V: Skyrim,Bethesda Game Studios,Bethesda Softworks,Action RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2011-11-11,94,30000000,M
+32,Mass Effect 2,BioWare,Electronic Arts,RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2010-01-26,94,4000000,M
+33,Dragon Age: Inquisition,BioWare,Electronic Arts,RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2014-11-18,89,6000000,M
+34,Persona 5,Atlus,Atlus,RPG,"PS3, PS4",2016-09-15,93,4000000,M
+35,Stardew Valley,ConcernedApe,ConcernedApe,Simulation,"PC, PS4, Xbox One, Nintendo Switch, Mobile",2016-02-26,89,20000000,E10+
+36,Subnautica,Unknown Worlds Entertainment,Unknown Worlds Entertainment,Survival,"PC, PS4, Xbox One, Nintendo Switch",2018-01-23,87,5000000,E10+
+37,Dead Cells,Motion Twin,Motion Twin,Roguelike,"PC, PS4, Xbox One, Nintendo Switch",2018-08-07,91,5000000,T
+38,Divinity: Original Sin II,Larian Studios,Larian Studios,RPG,"PC, PS4, Xbox One, Nintendo Switch",2017-09-14,93,5000000,M
+39,Undertale,Toby Fox,Toby Fox,RPG,"PC, PS4, Xbox One, Nintendo Switch",2015-09-15,92,1000000,E10+
+40,Terraria,Re-Logic,Re-Logic,Sandbox,"PC, PS4, Xbox One, Nintendo Switch, Mobile",2011-05-16,83,35000000,T

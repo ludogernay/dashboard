@@ -1,4 +1,5 @@
 import cgi
+import pandas as pd
 import data_processing as dp
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")

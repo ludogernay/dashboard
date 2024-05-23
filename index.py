@@ -5,10 +5,10 @@ import data_processing as dp
 form = cgi.FieldStorage()
 
 # Récupérer les critères de filtrage
-genreForm = form.getvalue('genre')
-platformForm = form.getvalue('platform')
-release_dateForm = form.getvalue('release-date')
-date_typeForm = form.getvalue('date-type')
+genreForm = form.getfirst('genre', '')
+platformForm = form.getfirst('platform', '')
+release_dateForm = form.getfirst('release-date', '')
+date_typeForm = form.getfirst('date-type', '')
 
 print("Content-type: text/html; charset=utf-8\n")
 
@@ -128,7 +128,7 @@ html += """
                     <option value="">All</option>"""
 for platform in platforms:
     html += f'\n<option value="{platform}" {"selected" if platform == platformForm else ""}>{platform}</option>'   
-html += """
+html += f"""
                 </select>
             </div>
             <div class="filter-group">
@@ -138,6 +138,7 @@ html += """
             <div class="filter-group">
                 <label for="date-type">Date:</label>
                 <select id="date-type" name="date-type">
+                    <option value="">All</option>
                     <option value="min" {"selected" if date_typeForm == 'min' else ""}>Minimum</option>
                     <option value="max" {"selected" if date_typeForm == 'max' else ""}>Maximum</option>
                     <option value="exact" {"selected" if date_typeForm == 'exact' else ""}>Exacte</option>

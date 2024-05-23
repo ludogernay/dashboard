@@ -1,11 +1,5 @@
 import cgi
 import data_processing as dp
-form = cgi.FieldStorage()
-print("Content-type: text/html; charset=utf-8\n")
-
-df = dp.read_csv_files("videogames.csv")
-genres = dp.select_csv_column(df, "Genre").unique()
-platforms = dp.select_csv_column(df, "Platform").unique()
 
 # Récupérer les données du formulaire
 form = cgi.FieldStorage()
@@ -15,6 +9,12 @@ genreForm = form.getvalue('genre')
 platformForm = form.getvalue('platform')
 release_dateForm = form.getvalue('release-date')
 date_typeForm = form.getvalue('date-type')
+
+print("Content-type: text/html; charset=utf-8\n")
+
+df = dp.read_csv_files("videogames.csv")
+genres = dp.select_csv_column(df, "Genre").unique()
+platforms = dp.select_csv_column(df, "Platform").unique()
 
 # Appliquer les filtres
 filtered_df = df
@@ -31,8 +31,6 @@ if release_dateForm:
         filtered_df = filtered_df[filtered_df['Release Year'] <= release_dateForm]
     elif date_typeForm == 'exact':
         filtered_df = filtered_df[filtered_df['Release Year'] == release_dateForm]
-
-
 
 html = f"""<!DOCTYPE html>
 <html>
@@ -63,7 +61,7 @@ html = f"""<!DOCTYPE html>
         }}
         .filters:hover {{
             left: -0.7%;
-}}
+        }}
          .filter-group {{
             margin-bottom: 1rem;
             padding: 0.5rem;
@@ -113,49 +111,49 @@ html = f"""<!DOCTYPE html>
 <body>
     <h1>Gaming Tracker</h1>
     <div class="filters">
-            <h2>Filter Games</h2>
-            <form action="index.py?filter={genreForm}" method="post">
+        <h2>Filter Games</h2>
+        <form action="index.py" method="post">
             <div class="filter-group">
                 <label for="genre">Genre:</label>
-                <select id="genre" name="genre">"""
+                <select id="genre" name="genre">
+                    <option value="">All</option>"""
 for genre in genres:
-    html += f'\n<option value="{genre}">{genre}</option>'   
+    html += f'\n<option value="{genre}" {"selected" if genre == genreForm else ""}>{genre}</option>'   
 html += """
                 </select>
             </div>
             <div class="filter-group">
                 <label for="platform">Platform:</label>
-                <select id="platform" name="platform">"""
+                <select id="platform" name="platform">
+                    <option value="">All</option>"""
 for platform in platforms:
-    html += f'\n<option value="{platform}">{platform}</option>'   
+    html += f'\n<option value="{platform}" {"selected" if platform == platformForm else ""}>{platform}</option>'   
 html += """
-
                 </select>
             </div>
             <div class="filter-group">
                 <label for="release-date">Release Year :</label>
-                <input type="date" id="year" name="release-date" name="release-date">
+                <input type="date" id="year" name="release-date" value="{release_dateForm}">
             </div>
             <div class="filter-group">
                 <label for="date-type">Date:</label>
                 <select id="date-type" name="date-type">
-                    <option value="min">Minimum</option>
-                    <option value="max">Maximum</option>
-                    <option value="exact">Exacte</option>
+                    <option value="min" {"selected" if date_typeForm == 'min' else ""}>Minimum</option>
+                    <option value="max" {"selected" if date_typeForm == 'max' else ""}>Maximum</option>
+                    <option value="exact" {"selected" if date_typeForm == 'exact' else ""}>Exacte</option>
                 </select>
             </div>
             <button type="submit">Apply Filters</button>
-            </form>
-        </div>
-    <div class='container'>
-"""
-print(html) 
+        </form>
+    </div>
+    <div class='container'>"""
 
 for i in filtered_df['Image'].tolist():
-    print(f"<div class='game'><img class='logo' src='{i}' alt='Game Image'></div>")
-print("</div>")
-
-html_end = """
+    html += f"<div class='game'><img class='logo' src='{i}' alt='Game Image'></div>"
+html += """
+    </div>
 </body>
 </html>
 """
+
+print(html)

@@ -4,7 +4,7 @@ form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
 df = pd.read_csv("videogames.csv")
-
+print(df["Image"].head(1).tolist())
 
 html = """<!DOCTYPE html>
 <head>
@@ -49,6 +49,7 @@ html = """<!DOCTYPE html>
 """
 print(html)
 print("<div class='container'>")
-for i in df['Title'].tolist():
+for i in df['Image'].tolist():
     print(f"<div class=\"game\">{i}</div>")
 print("</div>")
+print(f"<img src={df["Image"].head(1).to_string(index=False)} alt=\"Google Logo\">")

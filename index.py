@@ -22,7 +22,7 @@ html = """<!DOCTYPE html>
         .filters {
             position: fixed;
             transition: left 0.3s ease;
-            left: -350px;
+            left: -15%;
             width: 20%;
             padding: 1rem;
             margin : 1%;
@@ -30,8 +30,12 @@ html = """<!DOCTYPE html>
             border-radius: 7px;
             border: solid 2px white;
         }
+        
+        .filters h2 {
+            text-align: right;
+        }
         .filters:hover {
-            left: 0;
+            left: -0.7%;
 }
          .filter-group {
             margin-bottom: 1rem;

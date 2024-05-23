@@ -1,9 +1,11 @@
 import cgi
-import pandas as pd
+import data_processing as dp
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
+
 df = pd.read_csv("videogames.csv")
+
 
 html = """<!DOCTYPE html>
 <html>
@@ -65,5 +67,3 @@ html_end = """
 </body>
 </html>
 """
-
-print(html_end)

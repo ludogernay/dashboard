@@ -2,6 +2,7 @@ import cgi
 import data_processing as dp
 
 # Récupérer les données du formulaire
+import pandas as pd
 form = cgi.FieldStorage()
 
 # Récupérer les critères de filtrage
@@ -86,12 +87,11 @@ html = f"""<!DOCTYPE html>
             height: auto;
             min-height: 60vh;
             width: 80%;
-            border: solid 2px;
-            border-color: white;
-            border-radius: 7px;
             gap: 0.5rem;
         }}
         .game {{
+            display: flex;
+            align-items: center;
             background-color: #333;
             color: white;
             padding: 1rem;
@@ -149,9 +149,13 @@ html += f"""
     </div>
     <div class='container'>"""
 
-for i in filtered_df['Image'].tolist():
-    html += f"<div class='game'><img class='logo' src='{i}' alt='Game Image'></div>"
-html += """
+for i,row in filtered_df.iterrows():
+    game_id = row['ID']
+    image_url = row['Image']
+    html += f"<div class='game'><a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a></div>"
+print(html)
+
+html_end = """
     </div>
 </body>
 </html>

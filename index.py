@@ -4,9 +4,9 @@ form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
 df = pd.read_csv("videogames.csv")
-print(df["Image"].head(1).tolist())
 
 html = """<!DOCTYPE html>
+<html>
 <head>
     <title>Mon programme</title>
     <style>
@@ -19,6 +19,7 @@ html = """<!DOCTYPE html>
         }
         .container {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
             padding: 1rem;
             margin: 0 auto;
@@ -30,6 +31,7 @@ html = """<!DOCTYPE html>
             border-color: white;
             border-radius: 7px;
             gap: 0.5rem;
+        }
         .game {
             background-color: #333;
             color: white;
@@ -37,19 +39,31 @@ html = """<!DOCTYPE html>
             border-radius: 7px;
             border: solid 2px;
             border-color: white;
-            width: 30%;
+            width: 16%;
             text-align: center;
+        }
+        .logo {
+            width: 100%;
+            height: auto;
+            border-radius: 7px;
         }
     </style>
 </head>
 <body>
     <h1>Gaming Tracker</h1>
+    <div class='container'>
+"""
+
+print(html)
+
+for i in df['Image'].tolist():
+    print(f"<div class='game'><img class='logo' src='{i}' alt='Game Image'></div>")
+
+print("</div>")
+
+html_end = """
 </body>
 </html>
 """
-print(html)
-print("<div class='container'>")
-for i in df['Image'].tolist():
-    print(f"<div class=\"game\">{i}</div>")
-print("</div>")
-print(f"<img src={df["Image"].head(1).to_string(index=False)} alt=\"Google Logo\">")
+
+print(html_end)

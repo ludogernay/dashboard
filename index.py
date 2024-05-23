@@ -7,19 +7,46 @@ df = dp.read_csv_files("videogames.csv")
 genres = dp.select_csv_column(df, "Genre").unique()
 platforms = dp.select_csv_column(df, "Platform").unique()
 
-html = """<!DOCTYPE html>
+# Récupérer les données du formulaire
+form = cgi.FieldStorage()
+
+# Récupérer les critères de filtrage
+genreForm = form.getvalue('genre')
+platformForm = form.getvalue('platform')
+release_dateForm = form.getvalue('release-date')
+date_typeForm = form.getvalue('date-type')
+
+# Appliquer les filtres
+filtered_df = df
+
+if genreForm:
+    filtered_df = filtered_df[filtered_df['Genre'] == genreForm]
+if platformForm:
+    filtered_df = filtered_df[filtered_df['Platform'] == platformForm]
+if release_dateForm:
+    # Selon le type de date sélectionné, appliquer le filtre approprié
+    if date_typeForm == 'min':
+        filtered_df = filtered_df[filtered_df['Release Year'] >= release_dateForm]
+    elif date_typeForm == 'max':
+        filtered_df = filtered_df[filtered_df['Release Year'] <= release_dateForm]
+    elif date_typeForm == 'exact':
+        filtered_df = filtered_df[filtered_df['Release Year'] == release_dateForm]
+
+
+
+html = f"""<!DOCTYPE html>
 <html>
 <head>
     <title>Mon programme</title>
     <style>
-        body {
+        body {{
             background-color: black;
             color: white;
-        }
-        h1 {
+        }}
+        h1 {{
             text-align: center;
-        }
-        .filters {
+        }}
+        .filters {{
             position: fixed;
             transition: left 0.3s ease;
             left: -15%;
@@ -29,29 +56,29 @@ html = """<!DOCTYPE html>
             background-color: #222;
             border-radius: 7px;
             border: solid 2px white;
-        }
+        }}
         
-        .filters h2 {
+        .filters h2 {{
             text-align: right;
-        }
-        .filters:hover {
+        }}
+        .filters:hover {{
             left: -0.7%;
-}
-         .filter-group {
+}}
+         .filter-group {{
             margin-bottom: 1rem;
             padding: 0.5rem;
-        }
-        .filter-group label {
+        }}
+        .filter-group label {{
             display: block;
             margin-bottom: 0.5rem;
-        }
-        .filter-group input, .filter-group select {
+        }}
+        .filter-group input, .filter-group select {{
             width: 100%;
             padding: 0.5rem;
             border-radius: 5px;
             border: solid 1px #ddd;
-        }
-        .container {
+        }}
+        .container {{
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -65,8 +92,8 @@ html = """<!DOCTYPE html>
             border-color: white;
             border-radius: 7px;
             gap: 0.5rem;
-        }
-        .game {
+        }}
+        .game {{
             background-color: #333;
             color: white;
             padding: 1rem;
@@ -75,21 +102,22 @@ html = """<!DOCTYPE html>
             border-color: white;
             width: 16%;
             text-align: center;
-        }
-        .logo {
+        }}
+        .logo {{
             width: 100%;
             height: auto;
             border-radius: 7px;
-        }
+        }}
     </style>
 </head>
 <body>
     <h1>Gaming Tracker</h1>
     <div class="filters">
             <h2>Filter Games</h2>
+            <form action="index.py?filter={genreForm}" method="post">
             <div class="filter-group">
                 <label for="genre">Genre:</label>
-                <select id="genre">"""
+                <select id="genre" name="genre">"""
 for genre in genres:
     html += f'\n<option value="{genre}">{genre}</option>'   
 html += """
@@ -97,7 +125,7 @@ html += """
             </div>
             <div class="filter-group">
                 <label for="platform">Platform:</label>
-                <select id="platform">"""
+                <select id="platform" name="platform">"""
 for platform in platforms:
     html += f'\n<option value="{platform}">{platform}</option>'   
 html += """
@@ -106,7 +134,7 @@ html += """
             </div>
             <div class="filter-group">
                 <label for="release-date">Release Year :</label>
-                <input type="date" id="year" name="release-date">
+                <input type="date" id="year" name="release-date" name="release-date">
             </div>
             <div class="filter-group">
                 <label for="date-type">Date:</label>
@@ -116,14 +144,14 @@ html += """
                     <option value="exact">Exacte</option>
                 </select>
             </div>
-            <button onclick="applyFilters">Apply Filters</button>
+            <button type="submit">Apply Filters</button>
+            </form>
         </div>
     <div class='container'>
 """
+print(html) 
 
-print(html)
-
-for i in df['Image'].tolist():
+for i in filtered_df['Image'].tolist():
     print(f"<div class='game'><img class='logo' src='{i}' alt='Game Image'></div>")
 print("</div>")
 

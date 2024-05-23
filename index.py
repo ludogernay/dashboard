@@ -81,27 +81,36 @@ html = """<!DOCTYPE html>
                 <label for="genre">Genre:</label>
                 <select id="genre">
                     <option value="all">All</option>
-                    <option value="action">Action</option>
-                    <option value="adventure">Adventure</option>
-                    <option value="rpg">RPG</option>
+                    <option value="Action">Action</option>
+                    <option value="Action-adventure">Action-adventure</option>
+                    <option value="RPG">RPG</option>
                     <option value="shooter">Shooter</option>
+                    <option value="roguelike">Roguelike</option>
+                    <option value="Sandbox">Sandbox</option>
+                    <option value="Social simulation">Social simulation</option>
+                    <option value="Survival">Survival</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Metroidvania">Metroidvania</option>
+                    <option value="Platformer">Platformer</option>
                 </select>
             </div>
             <div class="filter-group">
                 <label for="platform">Platform:</label>
                 <select id="platform">
                     <option value="all">All</option>
-                    <option value="pc">PC</option>
-                    <option value="xbox">Xbox</option>
+                    <option value="Consoles">Consoles</option>
+                    <option value="PC">PC</option>
+                    <option value="XBOX">Xbox</option>
                     <option value="playstation">PlayStation</option>
-                    <option value="switch">Switch</option>
+                    <option value="Nintendo Switch">Switch</option>
+                    <option value="Mobile">Mobile</option>
                 </select>
             </div>
             <div class="filter-group">
                 <label for="year">Release Year:</label>
                 <input type="date" id="year">
             </div>
-            <button onclick="applyFilters()">Apply Filters</button>
+            <button onclick="applyFilters">Apply Filters</button>
         </div>
     <div class='container'>
 """

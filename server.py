@@ -1,9 +1,19 @@
 import http.server
+import os
+import subprocess
+
 PORT = 8888
 server_address = ("", PORT)
-server = http.server.HTTPServer
-handler = http.server.CGIHTTPRequestHandler
-handler.cgi_directories = ["/"]
-print("Serveur actif sur le port :", PORT)
-httpd = server(server_address, handler)
+
+# Generate graphs before starting the server
+subprocess.run(["python", "graphs.py"])
+
+class CustomHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/':
+            self.path = '/index.html'
+        return http.server.SimpleHTTPRequestHandler.do_GET(self)
+
+print("Server active on port:", PORT)
+httpd = http.server.HTTPServer(server_address, CustomHandler)
 httpd.serve_forever()

@@ -36,6 +36,8 @@ html = """<!DOCTYPE html>
             gap: 0.5rem;
         }
         .game {
+            display: flex;
+            align-items: center;
             background-color: #333;
             color: white;
             padding: 1rem;

@@ -22,12 +22,10 @@ def select_between_csv_line(dataframe, column_name, value1, value2):
     if value1 is not None and value2 is not None and value1 > value2:
         value1, value2 = value2, value1
 
-    # Handle edge cases
+    # Handle edge cases and select rows based on the range
     if value1 == value2:
         return select_csv_line(dataframe, column_name, value1)
-
-    # Select rows based on the range
-    if value1 is None:
+    elif value1 is None:
         return dataframe.loc[dataframe[column_name] < value2]
     elif value2 is None:
         return dataframe.loc[dataframe[column_name] > value1]

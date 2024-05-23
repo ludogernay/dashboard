@@ -30,12 +30,11 @@ html = """<!DOCTYPE html>
             height: auto;
             min-height: 60vh;
             width: 80%;
-            border: solid 2px;
-            border-color: white;
-            border-radius: 7px;
             gap: 0.5rem;
         }
         .game {
+            display: flex;
+            align-items: center;
             background-color: #333;
             color: white;
             padding: 1rem;
@@ -59,8 +58,10 @@ html = """<!DOCTYPE html>
 
 print(html)
 
-for i in df['Image'].tolist():
-    print(f"<div class='game'><img class='logo' src='{i}' alt='Game Image'></div>")
+for index, row in df.iterrows():
+    game_id = row['ID']
+    image_url = row['Image']
+    print(f"<div class='game'><a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a></div>")
 
 print("</div>")
 

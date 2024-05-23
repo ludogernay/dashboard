@@ -20,6 +20,9 @@ html = """<!DOCTYPE html>
             text-align: center;
         }
         .filters {
+            position: fixed;
+            transition: left 0.3s ease;
+            left: -350px;
             width: 20%;
             padding: 1rem;
             margin : 1%;
@@ -27,6 +30,9 @@ html = """<!DOCTYPE html>
             border-radius: 7px;
             border: solid 2px white;
         }
+        .filters:hover {
+            left: 0;
+}
          .filter-group {
             margin-bottom: 1rem;
             padding: 0.5rem;

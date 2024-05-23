@@ -107,8 +107,16 @@ html = """<!DOCTYPE html>
                 </select>
             </div>
             <div class="filter-group">
-                <label for="year">Release Year:</label>
-                <input type="date" id="year">
+                <label for="release-date">Release Year :</label>
+                <input type="date" id="year" name="release-date">
+            </div>
+            <div class="filter-group">
+                <label for="date-type">Date:</label>
+                <select id="date-type" name="date-type">
+                    <option value="min">Minimum</option>
+                    <option value="max">Maximum</option>
+                    <option value="exact">Exacte</option>
+                </select>
             </div>
             <button onclick="applyFilters">Apply Filters</button>
         </div>

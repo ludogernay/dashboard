@@ -3,9 +3,9 @@ import data_processing as dp
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
-
 df = dp.read_csv_files("videogames.csv")
-
+genres = dp.select_csv_column(df, "Genre").unique()
+platforms = dp.select_csv_column(df, "Platform").unique()
 
 html = """<!DOCTYPE html>
 <html>
@@ -89,31 +89,19 @@ html = """<!DOCTYPE html>
             <h2>Filter Games</h2>
             <div class="filter-group">
                 <label for="genre">Genre:</label>
-                <select id="genre">
-                    <option value="all">All</option>
-                    <option value="Action">Action</option>
-                    <option value="Action-adventure">Action-adventure</option>
-                    <option value="RPG">RPG</option>
-                    <option value="shooter">Shooter</option>
-                    <option value="roguelike">Roguelike</option>
-                    <option value="Sandbox">Sandbox</option>
-                    <option value="Social simulation">Social simulation</option>
-                    <option value="Survival">Survival</option>
-                    <option value="Sports">Sports</option>
-                    <option value="Metroidvania">Metroidvania</option>
-                    <option value="Platformer">Platformer</option>
+                <select id="genre">"""
+for genre in genres:
+    html += f'\n<option value="{genre}">{genre}</option>'   
+html += """
                 </select>
             </div>
             <div class="filter-group">
                 <label for="platform">Platform:</label>
-                <select id="platform">
-                    <option value="all">All</option>
-                    <option value="Consoles">Consoles</option>
-                    <option value="PC">PC</option>
-                    <option value="XBOX">Xbox</option>
-                    <option value="playstation">PlayStation</option>
-                    <option value="Nintendo Switch">Switch</option>
-                    <option value="Mobile">Mobile</option>
+                <select id="platform">"""
+for platform in platforms:
+    html += f'\n<option value="{platform}">{platform}</option>'   
+html += """
+
                 </select>
             </div>
             <div class="filter-group">

@@ -3,8 +3,10 @@ import data_processing as dp
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
-df = dp.read_csv_files("videogames.csv")
-filtered_df = dp.select_between_csv_line(df, "Sales", 20000000,40000000)
+
+df = pd.read_csv("videogames.csv")
+print(df["Image"].head(1).tolist())
+
 
 html = """<!DOCTYPE html>
 <head>
@@ -49,6 +51,8 @@ html = """<!DOCTYPE html>
 """
 print(html)
 print("<div class='container'>")
-for i in filtered_df['Title'].tolist():
+for i in df['Image'].tolist():
+
     print(f"<div class=\"game\">{i}</div>")
 print("</div>")
+print(f"<img src={df["Image"].head(1).to_string(index=False)} alt=\"Google Logo\">")

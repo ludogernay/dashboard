@@ -32,4 +32,18 @@ def select_between_csv_line(dataframe, column_name, value1, value2):
     else:
         return dataframe.loc[(dataframe[column_name] > value1) & (dataframe[column_name] < value2)]
 
+def delete_csv_line(dataframe, column_name, value) :
+    df = dataframe.drop(dataframe.loc[dataframe[column_name] == value].index)
+    return df
 
+def create_csv_line(dataframe, values) :
+    if not dataframe.empty:
+        max_id = dataframe['ID'].astype(int).max()
+        new_id = max_id + 1
+    else:
+        new_id = 1
+    # Ajouter l'ID au dictionnaire de valeurs
+    values['ID'] = new_id
+    new_row = pd.DataFrame([values])
+    df = pd.concat([dataframe, new_row], ignore_index=True)
+    return df

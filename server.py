@@ -12,6 +12,8 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.path = '/index.html'
+        if self.path == '/graphs':
+            self.path = 'index.html'
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
 print("Server active on port:", PORT)

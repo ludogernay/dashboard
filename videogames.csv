@@ -1,41 +1,39 @@
-ID,Title,Developer,Publisher,Genre,Platform,Release Date,Rating,Sales,ESRB Rating,Image
-1,The Legend of Zelda: Breath of the Wild,Nintendo,Nintendo,Action-adventure,Nintendo Switch,2017-03-03,97,27600000,E10+,https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSO0-bXLKMPSHQECjZUuy4gbwdgmF-7sfhHQ0b59Q2nv8ZZiBzgHEu5mwDuVLBPf71rkB_zQA
-2,God of War,Santa Monica Studio,Sony Interactive Entertainment,Action-adventure,PS4,2018-04-20,94,19000000,M
-3,Red Dead Redemption 2,Rockstar Games,Rockstar Games,Action-adventure,"PS4, Xbox One, PC",2018-10-26,97,44000000,M
-4,Minecraft,Mojang,Mojang,Sandbox,"PC, Mobile, Consoles",2011-11-18,93,238000000,E10+
-5,The Witcher 3: Wild Hunt,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One, Nintendo Switch",2015-05-19,93,30000000,M
-6,Grand Theft Auto V,Rockstar North,Rockstar Games,Action-adventure,"PC, PS3, PS4, Xbox 360, Xbox One",2013-09-17,97,185000000,M
-7,Cyberpunk 2077,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One",2020-12-10,86,20000000,M
-8,Animal Crossing: New Horizons,Nintendo,Nintendo,Social simulation,Nintendo Switch,2020-03-20,90,40000000,E
-9,Fortnite,Epic Games,Epic Games,Battle Royale,"PC, Mobile, Consoles",2017-07-25,87,100000000,T
-10,Call of Duty: Warzone,Infinity Ward,Activision,Battle Royale,"PC, PS4, Xbox One",2020-03-10,78,,M
-11,Apex Legends,Respawn Entertainment,Electronic Arts,Battle Royale,"PC, PS4, Xbox One",2019-02-04,89,,T
-12,Among Us,InnerSloth,InnerSloth,Party,"PC, Mobile",2018-06-15,85,,E10+
-13,Assassin's Creed Valhalla,Ubisoft Montreal,Ubisoft,Action RPG,"PC, PS4, Xbox One",2020-11-10,85,,M
-14,Super Mario Odyssey,Nintendo,Nintendo,Platform,Nintendo Switch,2017-10-27,97,24600000,E10+
-15,Hades,Supergiant Games,Supergiant Games,Roguelike,"PC, PS4, Xbox One, Nintendo Switch",2020-09-17,93,1500000,T
-16,Resident Evil Village,Capcom,Capcom,Survival Horror,"PC, PS4, Xbox One",2021-05-07,83,4500000,M
-17,Doom Eternal,id Software,Bethesda Softworks,First-person shooter,"PC, PS4, Xbox One",2020-03-20,88,3000000,M
-18,Halo Infinite,343 Industries,Xbox Game Studios,First-person shooter,"PC, Xbox One, Xbox Series X/S",2021-12-08,87,4000000,T
-19,FIFA 21,EA Vancouver,EA Sports,Sports,"PC, PS4, Xbox One, Nintendo Switch",2020-10-09,74,12000000,E
-20,Fall Guys: Ultimate Knockout,Mediatonic,Devolver Digital,Party,"PC, PS4, PS5, Xbox One, Xbox Series X/S",2020-08-04,80,11000000,E10+
-21,Cyberpunk 2077,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One",2020-12-10,86,20000000,M
-22,The Last of Us Part II,Naughty Dog,Sony Interactive Entertainment,Action-adventure,PS4,2020-06-19,93,10000000,M,https://image.api.playstation.com/vulcan/img/rnd/202010/2618/Y02ljdBodKFBiziorYgqftLE.png
-23,Ghost of Tsushima,Sucker Punch Productions,Sony Interactive Entertainment,Action-adventure,PS4,2020-07-17,83,8000000,M,https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/v53I7qHvpWSQsL2oLxrM46NV.png
-24,Bloodborne,FromSoftware,Sony Interactive Entertainment,Action RPG,PS4,2015-03-24,92,2000000,M,https://bdi.dlpdomain.com/album/9791026816843/couv/M385x862/bloodborne-tome-2.jpg
-25,Dark Souls III,FromSoftware,Bandai Namco Entertainment,Action RPG,"PC, PS4, Xbox One",2016-03-24,89,10000000,M,https://data.xxlgamer.com/products/3444/lPhi1aAZ03aSMk-medium.jpg
-26,Hollow Knight,Team Cherry,Team Cherry,Metroidvania,"PC, PS4, Xbox One, Nintendo Switch",2017-02-24,90,2800000,E10+,https://alloparadise.s3.eu-west-3.amazonaws.com/products/md/hollow-knight.png
-27,Monster Hunter: World,Capcom,Capcom,Action RPG,"PC, PS4, Xbox One",2018-01-26,88,16000000,T,https://image.jeuxvideo.com/medias/149760/1497601320-218-jaquette-avant.jpg
-28,Sekiro: Shadows Die Twice,FromSoftware,Activision,Action-adventure,"PC, PS4, Xbox One",2019-03-22,90,5000000,M,https://data.xxlgamer.com/products/4740/OXDkdiFxEoNVKk-big.jpg
-29,Celeste,Maddy Makes Games,Maddy Makes Games,Platformer,"PC, PS4, Xbox One, Nintendo Switch",2018-01-25,92,500000,T,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Celeste_box_art_full.png/220px-Celeste_box_art_full.png
-30,Overwatch,Blizzard Entertainment,Blizzard Entertainment,First-person shooter,"PC, PS4, Xbox One",2016-05-24,91,50000000,T,https://image.jeuxvideo.com/medias/145763/1457626578-574-jaquette-avant.png
-31,The Elder Scrolls V: Skyrim,Bethesda Game Studios,Bethesda Softworks,Action RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2011-11-11,94,30000000,M,https://cdn.cdkeys.com/700x700/media/catalog/product/v/s/vsdada.jpg
-32,Mass Effect 2,BioWare,Electronic Arts,RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2010-01-26,94,4000000,M,https://www.gamers-shop.dk/images/game_img/me2n.jpg
-33,Dragon Age: Inquisition,BioWare,Electronic Arts,RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2014-11-18,89,6000000,M,https://m.media-amazon.com/images/I/71JzFaZu3lL._AC_UF1000,1000_QL80_.jpg
-34,Persona 5,Atlus,Atlus,RPG,"PS3, PS4",2016-09-15,93,4000000,M,https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Persona_5_cover_art.jpg/220px-Persona_5_cover_art.jpg
-35,Stardew Valley,ConcernedApe,ConcernedApe,Simulation,"PC, PS4, Xbox One, Nintendo Switch, Mobile",2016-02-26,89,20000000,E10+,https://products.eneba.games/resized-products/xrpmydnu9rpxvxfjkiu7_350x200_3x-0.jpg
-36,Subnautica,Unknown Worlds Entertainment,Unknown Worlds Entertainment,Survival,"PC, PS4, Xbox One, Nintendo Switch",2018-01-23,87,5000000,E10+,https://cdn.cdkeys.com/700x700/media/catalog/product/c/o/co2228_5_.jpg
-37,Dead Cells,Motion Twin,Motion Twin,Roguelike,"PC, PS4, Xbox One, Nintendo Switch",2018-08-07,91,5000000,T,https://upload.wikimedia.org/wikipedia/en/1/1f/Dead_cells_cover_art.png
-38,Divinity: Original Sin II,Larian Studios,Larian Studios,RPG,"PC, PS4, Xbox One, Nintendo Switch",2017-09-14,93,5000000,M,https://static.wikia.nocookie.net/divinity/images/1/12/Divinity_Original_Sin_-_Cover.jpg/revision/latest?cb=20230131185526&path-prefix=fr
-39,Undertale,Toby Fox,Toby Fox,RPG,"PC, PS4, Xbox One, Nintendo Switch",2015-09-15,92,1000000,E10+,https://www.google.fr/url?sa=i&url=https%3A%2F%2Fwww.g2a.com%2Ffr%2Fundertale-pc-steam-key-global-i10000005286007&psig=AOvVaw3PFN5UgJ4GxqX6XrVlK5Ew&ust=1716554010429000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLjXxpPko4YDFQAAAAAdAAAAABAE
-40,Terraria,Re-Logic,Re-Logic,Sandbox,"PC, PS4, Xbox One, Nintendo Switch, Mobile",2011-05-16,83,35000000,T,https://www.codesproduit.fr/wp-content/uploads/2021/01/terraria_cover_original.png
+ID,Title,Developer,Publisher,Genre,Platform,Release Date,Rating,Sales,ESRB Rating,Image,Plateform
+1,Legend of Zelda: Breath of the Wild,Nintendo,Nintendo,Action-adventure,PS4,2017-03-03,40,27600000.0,E10+,https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSO0-bXLKMPSHQECjZUuy4gbwdgmF-7sfhHQ0b59Q2nv8ZZiBzgHEu5mwDuVLBPf71rkB_zQA,PS4
+2,God of War,Santa Monica Studio,Sony Interactive Entertainment,Action-adventure,PS4,2018-04-20,94,19000000.0,M,https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg,
+3,Red Dead Redemption 2,Rockstar Games,Rockstar Games,Action-adventure,"PS4, Xbox One, PC",2018-10-26,97,44000000.0,M,https://assets.vg247.com/current//2018/05/red_dead_redemption_2_cover_art_1.jpg,
+4,Minecraft,Mojang,Mojang,Sandbox,"PC, Mobile, Consoles",2011-11-18,93,238000000.0,E10+,https://e-enfance.org/wp-content/uploads/2021/06/mincraft.jpg,
+5,The Witcher 3: Wild Hunt,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One, Nintendo Switch",2015-05-19,93,30000000.0,M,https://image.api.playstation.com/vulcan/ap/rnd/202211/0714/ojKZ7l0T2M5egR9YHIjVhI0R.png,
+6,Grand Theft Auto V,Rockstar North,Rockstar Games,Action-adventure,"PC, PS3, PS4, Xbox 360, Xbox One",2013-09-17,97,185000000.0,M,https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Grand_Theft_Auto_V.png/220px-Grand_Theft_Auto_V.png,
+7,Cyberpunk 2077,CD Projekt Red,CD Projekt,RPG,"PC, PS4, Xbox One",2020-12-10,86,20000000.0,M,https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg,
+8,Animal Crossing: New Horizons,Nintendo,Nintendo,Social simulation,Nintendo Switch,2020-03-20,90,40000000.0,E,https://external-preview.redd.it/XmYU1C6KD9q1m9qY1hnedMhwYbwdWf3J2F-BcDpiav0.png?format=pjpg&auto=webp&s=cbf386c9e839022b6ca98520faafa98a4aa59783,
+9,Call of Duty: Warzone,Infinity Ward,Activision,Battle Royale,"PC, PS4, Xbox One",2020-03-10,78,,M,https://i.pinimg.com/originals/4b/7e/98/4b7e98cae85aa6a9995af7651444e9f9.png,
+10,Apex Legends,Respawn Entertainment,Electronic Arts,Battle Royale,"PC, PS4, Xbox One",2019-02-04,89,,T,https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg,
+11,Among Us,InnerSloth,InnerSloth,Party,"PC, Mobile",2018-06-15,85,,E10+,https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg,
+12,Assassin's Creed Valhalla,Ubisoft Montreal,Ubisoft,Action RPG,"PC, PS4, Xbox One",2020-11-10,85,,M,https://image.jeuxvideo.com/medias/158826/1588264397-5261-jaquette-avant.jpg,
+13,Super Mario Odyssey,Nintendo,Nintendo,Platform,Nintendo Switch,2017-10-27,97,24600000.0,E10+,https://e.snmc.io/lk/l/x/b370636c3b822012beca8e1578c0a66e/8509472,
+14,Hades,Supergiant Games,Supergiant Games,Roguelike,"PC, PS4, Xbox One, Nintendo Switch",2020-09-17,93,1500000.0,T,https://www.rpgfan.com/wp-content/uploads/2020/08/Hades-Cover-Art.jpg,
+15,Resident Evil Village,Capcom,Capcom,Survival Horror,"PC, PS4, Xbox One",2021-05-07,83,4500000.0,M,https://www.codesproduit.fr/wp-content/uploads/2021/12/resident-evil-village_cover_original.png,
+16,Doom Eternal,id Software,Bethesda Softworks,First-person shooter,"PC, PS4, Xbox One",2020-03-20,88,3000000.0,M,https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png,
+17,Halo Infinite,343 Industries,Xbox Game Studios,First-person shooter,"PC, Xbox One, Xbox Series X/S",2021-12-08,87,4000000.0,T,https://upload.wikimedia.org/wikipedia/en/1/14/Halo_Infinite.png,
+18,FIFA 21,EA Vancouver,EA Sports,Sports,"PC, PS4, Xbox One, Nintendo Switch",2020-10-09,74,12000000.0,E,https://products.eneba.games/resized-products/S4Vcj2tsXAMJB-IOipeOnviwpos2HJdy2iW7I45LtcM_350x200_1x-0.jpeg,
+19,Fall Guys: Ultimate Knockout,Mediatonic,Devolver Digital,Party,"PC, PS4, PS5, Xbox One, Xbox Series X/S",2020-08-04,80,11000000.0,E10+,https://store-images.s-microsoft.com/image/apps.40370.14285042010965430.c8a9ceba-ef24-4f40-a94f-80c65ede0c2e.3254a5c1-a294-4d88-9d63-aa3d3e1f936c?w=400&h=600,PS4
+20,The Last of Us Part II,Naughty Dog,Sony Interactive Entertainment,Action-adventure,PS4,2020-06-19,93,10000000.0,M,https://image.api.playstation.com/vulcan/img/rnd/202010/2618/Y02ljdBodKFBiziorYgqftLE.png,
+21,Ghost of Tsushima,Sucker Punch Productions,Sony Interactive Entertainment,Action-adventure,PS4,2020-07-17,83,8000000.0,M,https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/v53I7qHvpWSQsL2oLxrM46NV.png,
+22,Bloodborne,FromSoftware,Sony Interactive Entertainment,Action RPG,PS4,2015-03-24,92,2000000.0,M,https://bdi.dlpdomain.com/album/9791026816843/couv/M385x862/bloodborne-tome-2.jpg,
+23,Dark Souls III,FromSoftware,Bandai Namco Entertainment,Action RPG,"PC, PS4, Xbox One",2016-03-24,89,10000000.0,M,https://data.xxlgamer.com/products/3444/lPhi1aAZ03aSMk-medium.jpg,
+24,Hollow Knight,Team Cherry,Team Cherry,Metroidvania,"PC, PS4, Xbox One, Nintendo Switch",2017-02-24,90,2800000.0,E10+,https://alloparadise.s3.eu-west-3.amazonaws.com/products/md/hollow-knight.png,
+25,Monster Hunter: World,Capcom,Capcom,Action RPG,"PC, PS4, Xbox One",2018-01-26,88,16000000.0,T,https://image.jeuxvideo.com/medias/149760/1497601320-218-jaquette-avant.jpg,
+26,Sekiro: Shadows Die Twice,FromSoftware,Activision,Action-adventure,"PC, PS4, Xbox One",2019-03-22,90,5000000.0,M,https://data.xxlgamer.com/products/4740/OXDkdiFxEoNVKk-big.jpg,
+27,Celeste,Maddy Makes Games,Maddy Makes Games,Platformer,"PC, PS4, Xbox One, Nintendo Switch",2018-01-25,92,500000.0,T,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Celeste_box_art_full.png/220px-Celeste_box_art_full.png,
+28,Overwatch,Blizzard Entertainment,Blizzard Entertainment,First-person shooter,"PC, PS4, Xbox One",2016-05-24,91,50000000.0,T,https://image.jeuxvideo.com/medias/145763/1457626578-574-jaquette-avant.png,
+29,The Elder Scrolls V: Skyrim,Bethesda Game Studios,Bethesda Softworks,Action RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2011-11-11,94,30000000.0,M,https://cdn.cdkeys.com/700x700/media/catalog/product/v/s/vsdada.jpg,
+30,Mass Effect 2,BioWare,Electronic Arts,RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2010-01-26,94,4000000.0,M,https://www.gamers-shop.dk/images/game_img/me2n.jpg,
+31,Dragon Age: Inquisition,BioWare,Electronic Arts,RPG,"PC, PS3, PS4, Xbox 360, Xbox One",2014-11-18,89,6000000.0,M,https://i.pinimg.com/originals/a5/4f/fc/a54ffc36329745e3859403067ca9cef1.jpg,
+32,Persona 5,Atlus,Atlus,RPG,"PS3, PS4",2016-09-15,93,4000000.0,M,https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Persona_5_cover_art.jpg/220px-Persona_5_cover_art.jpg,
+33,Stardew Valley,ConcernedApe,ConcernedApe,Simulation,"PC, PS4, Xbox One, Nintendo Switch, Mobile",2016-02-26,89,20000000.0,E10+,https://products.eneba.games/resized-products/xrpmydnu9rpxvxfjkiu7_350x200_3x-0.jpg,
+34,Subnautica,Unknown Worlds Entertainment,Unknown Worlds Entertainment,Survival,"PC, PS4, Xbox One, Nintendo Switch",2018-01-23,87,5000000.0,E10+,https://cdn.cdkeys.com/700x700/media/catalog/product/c/o/co2228_5_.jpg,
+35,Dead Cells,Motion Twin,Motion Twin,Roguelike,"PC, PS4, Xbox One, Nintendo Switch",2018-08-07,91,5000000.0,T,https://upload.wikimedia.org/wikipedia/en/1/1f/Dead_cells_cover_art.png,
+36,Divinity: Original Sin II,Larian Studios,Larian Studios,RPG,"PC, PS4, Xbox One, Nintendo Switch",2017-09-14,93,5000000.0,M,https://www.rpgamers.fr/images/rpgs/Divinity_Original_Sin_II-2698-titre.jpg,
+37,Undertale,Toby Fox,Toby Fox,RPG,"PC, PS4, Xbox One, Nintendo Switch",2015-09-15,92,1000000.0,E10+,https://static0.srcdn.com/wordpress/wp-content/uploads/2023/03/undertale.jpg,
+38,Terraria,Re-Logic,Re-Logic,Sandbox,"PC, PS4, Xbox One, Nintendo Switch, Mobile",2011-05-16,83,35000000.0,T,https://www.codesproduit.fr/wp-content/uploads/2021/01/terraria_cover_original.png,

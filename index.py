@@ -63,7 +63,7 @@ html = f"""<!DOCTYPE html>
             text-align: right;
         }}
         .filters:hover {{
-            left: -0.7%;
+            left: -0.6%;
         }}
          .filter-group {{
             margin-bottom: 1rem;

@@ -152,7 +152,11 @@ html += f"""
 for i,row in filtered_df.iterrows():
     game_id = row['ID']
     image_url = row['Image']
-    html += f"<div class='game'><a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a></div>"
+    html += f"""
+        <div class='game'>
+            <a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a>
+        </div>
+        """
 
 
 html_end = """

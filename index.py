@@ -101,12 +101,14 @@ html = f"""<!DOCTYPE html>
             border: solid 2px;
             border-color: white;
             width: 16%;
+            height: auto;
             text-align: center;
         }}
         .logo {{
             width: 100%;
-            height: auto;
+            height: 400px;
             border-radius: 7px;
+            border: solid 1px white;
         }}
         .button_logo {{
             display: flex;
@@ -115,13 +117,13 @@ html = f"""<!DOCTYPE html>
             width: 100%;
         }}
         .update_button {{
-            filter: invert(1) brightness(2);
+            filter: invert(1) brightness(2) sepia(20) saturate(50) hue-rotate(-50deg);
             width: 48px;
             height: 48px;
             cursor: pointer;
         }}
         .delete_button {{
-            filter: invert(1) brightness(2);
+            filter: invert(24%) sepia(95%) saturate(7484%) hue-rotate(340deg) brightness(101%) contrast(102%);
             width: 30px;
             height: 30px;
             cursor: pointer;

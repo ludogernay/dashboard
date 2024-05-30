@@ -32,3 +32,10 @@ def select_between_csv_line(dataframe, column_name, value1, value2):
     else:
         return dataframe.loc[(dataframe[column_name] > value1) & (dataframe[column_name] < value2)]
 
+def delete_csv_line(dataframe, column_name, value) :
+    df = dataframe.drop(dataframe.loc[dataframe[column_name] == value].index)
+    return df
+
+def create_csv_line(dataframe, values) :
+    df = dataframe.append(values, ignore_index=True)
+    return df

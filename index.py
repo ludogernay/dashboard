@@ -65,7 +65,7 @@ html = f"""<!DOCTYPE html>
         }}
          .filter-group {{
             margin-bottom: 1rem;
-            padding: 0.5rem;
+            padding: 2rem;
         }}
         .filter-group label {{
             display: block;
@@ -106,6 +106,28 @@ html = f"""<!DOCTYPE html>
             height: auto;
             border-radius: 7px;
         }}
+        .button {{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}}
+.button:hover {{background-color: #3e8e41}}
+
+.button:active {{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}}
+
     </style>
 </head>
 <body>
@@ -144,11 +166,11 @@ html += f"""
                     <option value="exact" {"selected" if date_typeForm == 'exact' else ""}>Exacte</option>
                 </select>
             </div>
-            <button type="submit">Apply Filters</button>
+            <button type="submit" class="button">Apply Filters </button>
         </form>
+         <a href="/createGame" class="button">Add Game</a>
     </div>
     <div class='container'>"""
-
 for i,row in filtered_df.iterrows():
     game_id = row['ID']
     image_url = row['Image']

@@ -168,7 +168,7 @@ html += f"""
             </div>
             <button type="submit" class="button">Apply Filters </button>
         </form>
-         <a href="/createGame" class="button">Add Game</a>
+         <a href="createGame.py" class="button">Add Game</a>
     </div>
     <div class='container'>"""
 for i,row in filtered_df.iterrows():

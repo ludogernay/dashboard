@@ -37,5 +37,13 @@ def delete_csv_line(dataframe, column_name, value) :
     return df
 
 def create_csv_line(dataframe, values) :
-    df = dataframe.append(values, ignore_index=True)
+    if not dataframe.empty:
+        max_id = dataframe['ID'].astype(int).max()
+        new_id = max_id + 1
+    else:
+        new_id = 1
+    # Ajouter l'ID au dictionnaire de valeurs
+    values['ID'] = new_id
+    new_row = pd.DataFrame([values])
+    df = pd.concat([dataframe, new_row], ignore_index=True)
     return df

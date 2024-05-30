@@ -198,7 +198,7 @@ for i,row in filtered_df.iterrows():
         <div class='game'>
             <div class='button_logo'>
                 <a href='update_game.py?id={game_id}'><img class='update_button' src='logos/update.png' alt='update'></a>
-                <img class='delete_button' src='logos/delete.png' alt='delete'>
+                <a href='delete_game.py?id={game_id}'><img class='delete_button' src='logos/delete.png' alt='delete'></a>
             </div>
             <a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a>
         </div>

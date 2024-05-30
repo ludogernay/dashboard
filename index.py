@@ -2,7 +2,6 @@ import cgi
 import data_processing as dp
 
 # Récupérer les données du formulaire
-import pandas as pd
 form = cgi.FieldStorage()
 
 # Récupérer les critères de filtrage

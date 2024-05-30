@@ -45,5 +45,10 @@ df = create_csv_line(df, new_game)
 # Enregistrer le fichier CSV mis à jour
 df.to_csv("videogames.csv", index=False)
 
-print("<p>Game added successfully!</p>")
-print("<a href='index.py'>Return to main page</a>")
+print("<p>Game added successfully! Returning to main page...</p>")
+print("<script>")
+print("  setTimeout(function() {")
+print("    window.location.href = 'index.py';")
+print("  }, 3000);")  # 3000 millisecondes = 3 secondes
+print("</script>")
+

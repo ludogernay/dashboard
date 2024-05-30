@@ -49,6 +49,7 @@ html = f"""<!DOCTYPE html>
             position: fixed;
             z-index: 1;
             transition: left 0.3s ease;
+            top: 0;
             left: -15%;
             width: 20%;
             padding: 1rem;
@@ -135,6 +136,7 @@ html = f"""<!DOCTYPE html>
             cursor: pointer;
             text-align: center;
             text-decoration: none;
+            margin: 1rem;
             outline: none;
             color: #fff;
             background-color: #4CAF50;
@@ -190,7 +192,7 @@ html += f"""
             </div>
             <button type="submit" class="button">Apply Filters </button>
         </form>
-         <a href="createGame.py" class="button">Add Game</a>
+         <a href="createGame.py" class="button"> (+) Add Game </a>
     </div>
     <div class='container'>"""
 for i,row in filtered_df.iterrows():

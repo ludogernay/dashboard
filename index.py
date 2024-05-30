@@ -91,6 +91,7 @@ html = f"""<!DOCTYPE html>
         }}
         .game {{
             display: flex;
+            flex-direction: column;
             align-items: center;
             background-color: #333;
             color: white;
@@ -105,6 +106,24 @@ html = f"""<!DOCTYPE html>
             width: 100%;
             height: auto;
             border-radius: 7px;
+        }}
+        .button {{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }}
+        .update_button {{
+            filter: invert(1) brightness(2);
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }}
+        .delete_button {{
+            filter: invert(1) brightness(2);
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
         }}
     </style>
 </head>
@@ -154,6 +173,10 @@ for i,row in filtered_df.iterrows():
     image_url = row['Image']
     html += f"""
         <div class='game'>
+            <div class='button'>
+                <a href='update_game.py?id={game_id}'><img class='update_button' src='logos/update.png' alt='update'></a>
+                <img class='delete_button' src='logos/delete.png' alt='delete'>
+            </div>
             <a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a>
         </div>
         """

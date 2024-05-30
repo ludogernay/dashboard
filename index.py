@@ -47,6 +47,7 @@ html = f"""<!DOCTYPE html>
         }}
         .filters {{
             position: fixed;
+            z-index: 1;
             transition: left 0.3s ease;
             left: -15%;
             width: 20%;

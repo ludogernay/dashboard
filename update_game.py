@@ -1,6 +1,7 @@
 import cgi
 import cgitb
 import pandas as pd
+import data_processing as dp
 cgitb.enable()
 
 # Lire les données depuis le fichier CSV
@@ -12,6 +13,7 @@ game_id = form.getvalue('id')
 
 # Trouver le jeu correspondant dans le DataFrame
 game = df.loc[df['ID'] == int(game_id)]
+platforms = dp.select_csv_column(df, "Platform").unique()
 
 # Si le jeu n'existe pas, gérer l'erreur
 if game.empty:
@@ -24,7 +26,7 @@ else:
     # Générer le formulaire HTML
     print("Content-Type: text/html")
     print()
-    print(f"""
+    html = f"""
     <!DOCTYPE html>
     <html lang="fr">
     <head>
@@ -40,8 +42,15 @@ else:
             <input type="text" id="name" name="name" value="{game['Title']}" required><br><br>
             <label for="image">Image URL:</label>
             <input type="text" id="image" name="image" value="{game['Image']}" required><br><br>
-            <label for="platform">Plateform:</label>
-            <input type="text" id="platform" name="platform" value="{game['Platform']}" required><br><br>
+            <label for="platform">Platform:</label>
+            <select id="platform" name="platform" required>
+                <option value="{game['Platform']}" selected>{game['Platform']}</option>
+    """
+    for platform in platforms:
+        if platform != game['Platform']:
+            html += f'\n                <option value="{platform}">{platform}</option>'
+    html += f"""
+            </select><br><br>
             <label for="rating">Rating: (1-100)</label>
             <input type="text" id="rating" name="rating" value="{game['Rating']}" required><br><br>
             <label for="sales">Sales:</label>
@@ -50,15 +59,19 @@ else:
         </form>
     </body>
     </html>
-    """)
+    """
+    print(html)
 
     # Traitement de la soumission du formulaire
     if form.getvalue('name'):
         name = form.getvalue('name')
         image = form.getvalue('image')
+        platform = form.getvalue('platform')
+        rating = form.getvalue('rating')
+        sales = form.getvalue('sales')
 
         # Mettre à jour les détails du jeu dans le DataFrame
-        df.loc[df['ID'] == int(game_id), ['Title', 'Image']] = [name, image]
+        df.loc[df['ID'] == int(game_id), ['Title', 'Image', 'Platform', 'Rating', 'Sales']] = [name, image, platform, rating, sales]
 
         # Écrire les modifications dans le fichier CSV
         df.to_csv('videogames.csv', index=False)

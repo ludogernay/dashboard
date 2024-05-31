@@ -77,7 +77,7 @@ html = f"""<!DOCTYPE html>
 <body>
     <h1>Add New Game</h1>
     <div class="form-container">
-        <form action="addingGame.py" method="post">
+        <form action="/add" method="post">
             <div class="form-group">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required>

@@ -19,4 +19,4 @@ df.to_csv('videogames.csv', index=False)
 # Rediriger vers la page principale
 print("Content-type: text/html")
 print()
-print("<script>window.location.href = 'index.py';</script>")
+print("<script>window.location.href = '/';</script>")

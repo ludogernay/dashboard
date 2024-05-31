@@ -48,7 +48,7 @@ df.to_csv("videogames.csv", index=False)
 print("<p>Game added successfully! Returning to main page...</p>")
 print("<script>")
 print("  setTimeout(function() {")
-print("    window.location.href = 'index.py';")
+print("    window.location.href = '/';")
 print("  }, 3000);")  # 3000 millisecondes = 3 secondes
 print("</script>")
 

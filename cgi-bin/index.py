@@ -27,11 +27,11 @@ if platformForm:
 if release_dateForm:
     # Selon le type de date sélectionné, appliquer le filtre approprié
     if date_typeForm == 'min':
-        filtered_df = filtered_df[filtered_df['Release Year'] >= release_dateForm]
+        filtered_df = filtered_df[filtered_df['Release Date'] >= release_dateForm]
     elif date_typeForm == 'max':
-        filtered_df = filtered_df[filtered_df['Release Year'] <= release_dateForm]
+        filtered_df = filtered_df[filtered_df['Release Date'] <= release_dateForm]
     elif date_typeForm == 'exact':
-        filtered_df = filtered_df[filtered_df['Release Year'] == release_dateForm]
+        filtered_df = filtered_df[filtered_df['Release Date'] == release_dateForm]
 
 html = f"""<!DOCTYPE html>
 <html>
@@ -102,6 +102,7 @@ html = f"""<!DOCTYPE html>
             border: solid 2px;
             border-color: white;
             width: 16%;
+            min-width: 250px;
             height: auto;
             text-align: center;
         }}
@@ -158,13 +159,13 @@ html = f"""<!DOCTYPE html>
     <h1>Gaming Tracker</h1>
     <div class="filters">
         <h2>Filter Games</h2>
-        <form action="index.py" method="post">
+        <form action="/" method="post">
             <div class="filter-group">
                 <label for="genre">Genre:</label>
                 <select id="genre" name="genre">
                     <option value="">All</option>"""
 for genre in genres:
-    html += f'\n<option value="{genre}" {"selected" if genre == genreForm else ""}>{genre}</option>'   
+    html += f'\n<option value="{genre}" {"selected" if genre == genreForm else ""}>{genre}</option>'
 html += """
                 </select>
             </div>
@@ -173,7 +174,7 @@ html += """
                 <select id="platform" name="platform">
                     <option value="">All</option>"""
 for platform in platforms:
-    html += f'\n<option value="{platform}" {"selected" if platform == platformForm else ""}>{platform}</option>'   
+    html += f'\n<option value="{platform}" {"selected" if platform == platformForm else ""}>{platform}</option>'
 html += f"""
                 </select>
             </div>
@@ -192,7 +193,7 @@ html += f"""
             </div>
             <button type="submit" class="button">Apply Filters </button>
         </form>
-         <a href="createGame.py" class="button"> (+) Add Game </a>
+         <a href="/create" class="button"> (+) Add Game </a>
     </div>
     <div class='container'>"""
 for i,row in filtered_df.iterrows():
@@ -201,10 +202,10 @@ for i,row in filtered_df.iterrows():
     html += f"""
         <div class='game'>
             <div class='button_logo'>
-                <a href='update_game.py?id={game_id}'><img class='update_button' src='logos/update.png' alt='update'></a>
-                <a href='delete_game.py?id={game_id}'><img class='delete_button' src='logos/delete.png' alt='delete'></a>
+                <a href='update?id={game_id}'><img class='update_button' src='/static/logos/update.png' alt='update'></a>
+                <a href='delete?id={game_id}'><img class='delete_button' src='/static/logos/delete.png' alt='delete'></a>
             </div>
-            <a href='game_page.py?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a>
+            <a href='game?id={game_id}'><img class='logo' src='{image_url}' alt='Game Image'></a>
         </div>
         """
 

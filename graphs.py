@@ -6,6 +6,9 @@ import os
 # Load the CSV data
 df = pd.read_csv('videogames.csv')
 
+# Convert Sales to millions
+df['Sales'] = df['Sales'] / 1_000_000
+
 # Create a directory to save the images if it doesn't exist
 output_dir = 'static'
 os.makedirs(output_dir, exist_ok=True)
@@ -39,8 +42,8 @@ def generate_graphs():
         plt.figure(figsize=(10, 6))
         sales_by_platform.plot(kind='barh', color=sns.color_palette("viridis", len(sales_by_platform)))
         plt.title('Sales by Platform')
-        plt.xlabel('Sales (by millions)')
-        plt.ylabel('Platform')
+        plt.xlabel('Sales (in millions)')
+        plt.ylabel('Platforms')
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, 'sales_by_platform.png'), bbox_inches='tight')
         plt.close()
@@ -51,7 +54,7 @@ def generate_graphs():
         sales_by_rating.plot(kind='line', marker='o', color='b')
         plt.title('Sales by Rating')
         plt.xlabel('Rating')
-        plt.ylabel('Sales')
+        plt.ylabel('Sales (in millions)')
         plt.grid(True)
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, 'sales_by_rating.png'), bbox_inches='tight')
@@ -60,16 +63,19 @@ def generate_graphs():
         # Additional Example: Sales over Time (Line Chart)
         df['Release Date'] = pd.to_datetime(df['Release Date'], errors='coerce')
         sales_over_time = df.groupby(df['Release Date'].dt.year)['Sales'].sum()
+        sales_over_time = sales_over_time.rolling(window=5, min_periods=1).mean()  # Apply moving average
+
         plt.figure(figsize=(10, 6))
-        sales_over_time.plot(kind='line', marker='o', color='g')
+        sales_over_time.plot(kind='line', marker='o', color='g', label='Sales (smoothed)')
         plt.title('Sales Over Time')
         plt.xlabel('Year')
-        plt.ylabel('Sales')
+        plt.ylabel('All Game Sales (in millions)')
+        plt.legend(['Some zero values are not representative due to game not being present'], loc='upper left')
         plt.grid(True)
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, 'sales_over_time.png'), bbox_inches='tight')
         plt.close()
-
+        
         # Additional Example: Average Rating by Genre (Bar Chart)
         avg_rating_by_genre = df.groupby('Genre')['Rating'].mean().sort_values()
         plt.figure(figsize=(10, 6))

@@ -194,7 +194,7 @@ html += f"""
             <button type="submit" class="button">Apply Filters </button>
         </form>
          <a href="/create" class="button"> (+) Add Game </a>
-         <a href="/graphs" class="button"> (o) See Stats </a>
+         <a href="/graphs" class="button"> (O) See Stats </a>
     </div>
     <div class='container'>"""
 for i,row in filtered_df.iterrows():

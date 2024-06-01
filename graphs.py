@@ -39,7 +39,7 @@ def generate_graphs():
         plt.figure(figsize=(10, 6))
         sales_by_platform.plot(kind='barh', color=sns.color_palette("viridis", len(sales_by_platform)))
         plt.title('Sales by Platform')
-        plt.xlabel('Sales')
+        plt.xlabel('Sales (by millions)')
         plt.ylabel('Platform')
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, 'sales_by_platform.png'), bbox_inches='tight')
